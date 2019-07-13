@@ -1,0 +1,41 @@
+body {
+    background: url(./assets/background.jpg);
+    background-size: 100%;
+}
+
+.navbar {
+    border-bottom-left-radius: 2vw;
+    border-bottom-right-radius: 2vw;
+}
+
+.block {
+    background: white;
+    box-shadow: 1px 1px 5px;
+    border-radius: 20px;
+    height: 100px;
+    width: 150px;
+    text-align: center;
+}
+.block h4 {
+    font-size: 20px;
+    padding-top: 10px;
+}
+
+#mailBtn {
+    z-index: 3;
+    position: fixed;
+    border-radius: 20px;
+    top: 650px;
+    right: 20px;
+    float: right;
+}
+
+#myChart {
+    margin-top: 30px;
+    height: 25vw;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 80px;
+    background: transparent;
+    text-align: center;
+}

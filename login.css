@@ -1,0 +1,55 @@
+body {
+    background: url(./assets/background.jpg);
+    background-size: 100%;
+}
+
+.centerH {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    display: block;
+    width: 25%;
+}
+
+.form-group {
+    box-shadow: 1px 5px 15px gray;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.form-control {
+    font-family: FontAwesome;
+}
+
+.textField {
+    width: 21vw;
+    font-family: Raleway;
+    border: 1px solid white;
+    margin-bottom: 5px;
+    margin-top: -5px;
+    padding-right: 10px;
+}
+
+#submitBtn {
+    margin-top: 40px;
+    border-radius: 15px;
+    box-shadow: 1px 5px 15px gray;
+    padding-right: 25px;
+    padding-left: 25px;
+    color: #58595c;
+    margin-bottom: 20px;
+    font-family: Raleway;
+}
+
+h3 {
+    color: gray;
+}
+
+#registerBtn {
+    margin-top: 15px;
+    border-radius: 15px;
+    box-shadow: 1px 5px 15px gray;
+    padding-right: 30px;
+    padding-left: 30px;
+    font-family: Raleway;
+}

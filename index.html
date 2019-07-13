@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>SenseGrass | Dashboard</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel='icon' href="./assets/Sensegrass-Logo-1.png">
+
+    <!-- All Fonts -->
+
+
+    <!-- All CDN's -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.5/css/mdb.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    
+    <!-- NavBar -->
+    <div class="container-fluid" id="top">    
+        <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+            <a class="navbar-brand" href="#top">
+                <img src="./assets/Sensegrass-logo.png" width="140" height="70" alt="SenseGrass-Logo" style="margin-left: 16px">
+            </a>
+
+            <!-- For mobile navigation bar -->
+            <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button> -->
+
+            <!-- NavBar Icons -->
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup" style="margin-top: 16px;">
+                <div class="navbar-nav ml-auto" style="margin-right: 5vw">
+
+                    <a class="nav-item nav-link active" href="index.html" style="margin-right: 5vw;">
+                        <i class="fas fa-home" 
+                        style="color: gray; font-size: 2.5vw;">
+                        </i>
+                    </a>
+            
+                    <a class="nav-item nav-link" href="#" style="margin-right: 5vw;">
+                        <i class="fas fa-seedling" 
+                        style="color: gray; font-size: 2.5vw;">
+                        </i>
+                    </a>
+
+                    <a class="nav-item nav-link" href="#">
+                        <i class="fas fa-user" 
+                        style="color: gray; font-size: 2.5vw;">
+                        </i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div style="margin-top: 100px">
+        <a class="weatherwidget-io" href="https://forecast7.com/en/17d3978d49/hyderabad/" data-label_1="HYDERABAD" data-label_2="WEATHER" data-theme="hexellence" >HYDERABAD WEATHER</a>
+    </div>
+    
+    <!-- <div id="forecast">
+        <h1>Weather at <span id="location"> </span></h1>
+        <div id="imgdiv">
+        <img id="img" src=""/>
+        </div>
+        <p>It is currently <span id="temp"> </span>ªF with <span id="desc"> </span></p>
+        <p>Wind: <span id="wind"></span></p>
+    </div> -->
+
+    <div class="row">
+        <div class="col-sm">
+            <div class="block" style="margin-top: 20px; margin-left: 40px;">
+                <h4>Air Pressure</h4>
+                <h2 id="airPressure">123 <span><i class="fas fa-wind"></i></span></h2>
+            </div>
+        </div>
+
+        <div class="col-sm">
+            <div class="block" style="margin-top: 20px; margin-left: 40px;">
+                <h4>Humidity</h4>
+                <h2 id="humidity">123 <span><img src="./assets/humidity.png"></span></h2>
+            </div>
+        </div>
+
+        <div class="col-sm">
+            <div class="block" style="margin-top: 20px; margin-left: 40px;">
+                <h4>Wind Speed</h4>
+                <h2 id="windSpeed">123 <span><i class="fas fa-wind"></i></span></h2>
+            </div>        
+        </div>
+
+        <div class="col-sm">
+            <div class="block" style="margin-top: 20px; margin-left: 40px;">
+                <h4 style="padding-top: 0px">Predicted Temperature</h4>
+                <h2 id="predTemperature">123 <span><i class="fas fa-temperature-low"></i></span></h2>
+            </div>        
+        </div>
+
+    </div>
+
+    <div class="container-fluid" id="myChart"></div>
+
+
+
+    <button type="button" id="mailBtn" class="btn btn-success" data-toggle="modal" data-target="#mailModal">
+        <span><i class="far fa-envelope"></i></span> Expert</button>
+    <!-- Modal -->
+    <div class="modal fade" id="mailModal" tabindex="-1" role="dialog" aria-labelledby="mailModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="mailModalLabel">Contact</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <p>Have any questions? We'd love to hear from you</p>
+                <h4>Your Details</h4>
+                <form>
+                    <div class="form-group">
+                        <input type="email" class="form-control" id="inputEmail1" placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                        <input type="name" class="form-control" id="exampleInputPassword1" placeholder="Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="subject" class="form-control" id="exampleInputPassword1" placeholder="Subject">
+                    </div>
+                    <h4>Your Message</h4>
+                    <div class="form-group">
+                            <textarea class="form-control" id="descriptionText" rows="3" placeholder="Enter your message"></textarea>
+                        </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary">Submit</button>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> -->
+    <!-- All Scripts -->
+    
+    <!-- Pie Chart-->
+    <script src="https://cdn.anychart.com/js/8.0.1/anychart-core.min.js"></script>
+    <script src="https://cdn.anychart.com/js/8.0.1/anychart-pie.min.js"></script>
+
+    <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+    <!-- Maps -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
+    <!-- Weather -->
+    <script>
+        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];
+            if(!d.getElementById(id)){
+                js=d.createElement(s);
+                js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';
+                fjs.parentNode.insertBefore(js,fjs); }}
+                (document,'script','weatherwidget-io-js');
+    </script>
+    <!-- Other Scripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" 
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" 
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="//www.jsdelivr.com/package/npm/chart.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.5/js/mdb.min.js"></script>
+    <script type="text/javascript" src='main.js'></script>
+</body>
+</html>
